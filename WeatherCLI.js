@@ -24,7 +24,7 @@ if(isConfig){
         config.key = (program.opts()).key;
         let configJSON = JSON.stringify(config);
         fs.writeFileSync('config.json',configJSON);
-}
+} // Checking the entered flags
 
 else{
 
@@ -56,7 +56,7 @@ function dateLine(){
     let line = year+' '+day+'.'+mon+' '+h+':'+m+'\n';
 
     return line;
-}
+} // Formatting the date and time
 
 function directionLine(degrees){
 
@@ -111,7 +111,7 @@ function directionLine(degrees){
     }
     return answ+'('+degrees+'°)';
     
-}
+} //Getting direction from degrees
 
 function display(value){
     let dateInfo = dateLine();
@@ -191,7 +191,7 @@ function display(value){
     }
 
     console.log('Wind direction : '+directLine);
-}
+} // Data display
 
 
 getWeather(lat,lon,key)
